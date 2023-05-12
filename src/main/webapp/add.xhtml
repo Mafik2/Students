@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"/>
+</h:head>
+<h:body styleClass="m-5">
+   <h1>Student</h1>
+   <h:form>
+      <div class="mb-3">
+         <label for="name" class="form-label">Name</label>
+         <h:inputText type="text" class="form-control" id="name" value="#{studentBean.newStudent.name}"/>
+      </div>
+      <div class="mb-3">
+         <label for="date" class="form-label">Date</label>
+         <h:inputText type="text" class="form-control" id="date" value="#{studentBean.newStudent.date}"/>
+      </div>
+      <div class="mb-3">
+         <label for="grade" class="form-label">Grade</label>
+         <h:inputText type="text" class="form-control" id="grade" value="#{studentBean.newStudent.grade}"/>
+      </div>
+      <h:commandButton type="submit" class="btn btn-primary" action="#{studentBean.add()}" value="submit"/>
+   </h:form>
+</h:body>
+</html>
